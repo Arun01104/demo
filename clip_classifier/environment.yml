@@ -1,0 +1,27 @@
+# environment.yml
+name: draecon_env
+channels:
+  - pytorch
+  - nvidia
+  - anaconda
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pytorch
+  - torchvision
+  - pytorch-cuda=12.1  # Optimized for your CUDA 12.3 driver
+  - pip
+  - pip:
+    # From your original requirements.txt
+    - opencv-python==4.9.0.80
+    - onnxruntime-gpu==1.17.1
+    - insightface==0.7.3
+    - scikit-image==0.22.0
+    - fastapi==0.111.0
+    - uvicorn[standard]==0.29.0
+    - python-multipart==0.0.9
+    - chromadb==0.4.24
+    - passlib[bcrypt]==1.7.4
+    # New requirements for our classifier
+    - PyYAML==6.0.1
+    - transformers

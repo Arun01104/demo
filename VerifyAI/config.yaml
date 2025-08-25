@@ -1,0 +1,25 @@
+# ==================================================
+# Master Configuration for Sentinel Engine
+# ==================================================
+
+models:
+  detector_path: './models/scrfd_10g_bnkps.onnx'
+  recognizer_path: './models/w600k_r50.onnx'
+  liveness_model_path: './models/liveness.onnx'
+
+detection:
+  det_size: [640, 640]
+  det_thresh: 0.6
+
+quality:
+  blur_threshold: 100.0
+  brightness_min: 50.0
+  brightness_max: 200.0
+
+antispoof:
+  real_score_threshold: 0.9
+
+verification:
+  # Cosine similarity threshold to consider two faces as the same person.
+  # ChromaDB uses distance, so this value is converted internally.
+  cosine_threshold: 0.5

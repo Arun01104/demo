@@ -1,0 +1,23 @@
+# ===================================================================
+# Pinned versions for a stable, reproducible environment.
+# ===================================================================
+# Core AI & Vision
+opencv-python==4.9.0.80
+numpy==1.26.4
+onnxruntime-gpu==1.17.1
+insightface==0.7.3
+scikit-image==0.22.0
+
+# Web Service & API
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+python-multipart==0.0.9
+
+# Database
+chromadb==0.4.24
+
+# Security
+passlib[bcrypt]==1.7.4
+
+# Configuration
+PyYAML==6.0.1
